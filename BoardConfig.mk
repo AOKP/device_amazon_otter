@@ -23,6 +23,7 @@ USE_CAMERA_STUB := true
 #DSURFACEFLINGER_FORCE_SCREEN_RELEASE := true
 BOARD_HAVE_FAKE_GPS := true
 #BOARD_CUSTOM_USB_CONTROLLER := ../../device/amazon/otter/UsbController.cpp
+TARGET_OTA_ASSERT_SKIP := true
 
 # inherit from the proprietary version
 -include vendor/amazon/otter/BoardConfigVendor.mk
