@@ -25,7 +25,7 @@ else
 LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
-$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/aokp/products/common_tablet.mk)
 $(call inherit-product-if-exists, vendor/amazon/otter/otter-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS := device/amazon/otter/overlay

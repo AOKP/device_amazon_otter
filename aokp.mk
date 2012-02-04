@@ -27,11 +27,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 #$(call inherit-product, device/sample/products/backup_overlay.mk)
 # Inherit from otter device
 $(call inherit-product, device/amazon/otter/device.mk)
-$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/aokp/products/common_tablet.mk)
 $(call inherit-product-if-exists, vendor/amazon/otter/otter-vendor.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := cm_otter
+PRODUCT_NAME := aokp_otter
 PRODUCT_DEVICE := otter
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := Amazon Kindle Fire
