@@ -37,9 +37,6 @@ DEVICE_PACKAGE_OVERLAYS := device/amazon/otter/overlay
 PRODUCT_AAPT_CONFIG := normal mdpi hdpi
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-	persist.sys.usb.config=mtp
-
 PRODUCT_PACKAGES := \
 	lights.otter \
 	charger \
@@ -178,6 +175,9 @@ PRODUCT_PACKAGES += \
 	libCustomWifi \
 	wpa_supplicant.conf \
 	dhcpcd.conf
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+	persist.sys.usb.config=mtp
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
