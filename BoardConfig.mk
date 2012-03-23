@@ -48,7 +48,7 @@ TARGET_NO_BOOTLOADER := true
 TARGET_PROVIDES_RELEASETOOLS := true
 TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := ./device/amazon/otter/releasetools/otter_img_from_target_files
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/amazon/otter/releasetools/otter_ota_from_target_files
-
+TARGET_CUSTOM_RELEASETOOL := ./device/amazon/otter/releasetools/squisher
 
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 4096
