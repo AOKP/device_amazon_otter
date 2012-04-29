@@ -66,6 +66,9 @@ BOARD_HAS_SDCARD_INTERNAL := true
 BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/platform/mmci-omap-hs.1/by-name/media
 BOARD_SDCARD_DEVICE_INTERNAL := /dev/block/platform/mmci-omap-hs.1/by-name/media
 
+# kernel
+TARGET_PREBUILT_KERNEL := device/amazon/otter/kernel
+
 #BOARD_USES_HGL := true
 #BOARD_USES_OVERLAY := true
 #USE_OPENGL_RENDERER := true
