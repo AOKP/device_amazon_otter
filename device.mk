@@ -197,5 +197,7 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
 endif
 
 $(call inherit-product, frameworks/base/build/phone-hdpi-512-dalvik-heap.mk)
-$(call inherit-product, hardware/ti/omap4xxx/omap4.mk)
-$(call inherit-product-if-exists, vendor/ti/proprietary/omap4/ti-omap4-vendor.mk)
+#direct copy of hardware/ti/omap4xxx/omap4.mk, but with hwcomposer and camera commented out, should get rid of need to remove hwcomposer.omap4.so before booting.
+$(call inherit-product, device/amazon/otter/omap4.mk)
+#doesn't exist, not worth checking for.
+#$(call inherit-product-if-exists, vendor/ti/proprietary/omap4/ti-omap4-vendor.mk)

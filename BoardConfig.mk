@@ -48,7 +48,7 @@ TARGET_NO_BOOTLOADER := true
 TARGET_PROVIDES_RELEASETOOLS := true
 TARGET_RELEASETOOL_IMG_FROM_TARGET_SCRIPT := ./device/amazon/otter/releasetools/otter_img_from_target_files
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := ./device/amazon/otter/releasetools/otter_ota_from_target_files
-TARGET_CUSTOM_RELEASETOOL := ./device/amazon/otter/releasetools/squisher
+
 
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 4096
@@ -65,6 +65,9 @@ BOARD_EGL_CFG := device/amazon/otter/misc/egl.cfg
 BOARD_HAS_SDCARD_INTERNAL := true
 BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/platform/mmci-omap-hs.1/by-name/media
 BOARD_SDCARD_DEVICE_INTERNAL := /dev/block/platform/mmci-omap-hs.1/by-name/media
+
+# kernel
+TARGET_PREBUILT_KERNEL := device/amazon/otter/kernel
 
 #BOARD_USES_HGL := true
 #BOARD_USES_OVERLAY := true
