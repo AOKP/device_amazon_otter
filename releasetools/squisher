@@ -35,7 +35,7 @@ if [ ! -f "$OTAPACKAGE" ]; then
 	exit 1
 fi
 
-OPTICHARGER=$ANDROID_BUILD_TOP/vendor/cm/tools/opticharger
+OPTICHARGER=$ANDROID_BUILD_TOP/vendor/aokp/tools/opticharger
 QUIET=-q
 DELETE_BINS="applypatch applypatch_static check_prereq recovery updater"
 
@@ -149,14 +149,12 @@ rm -rf $REPACK/ota/recovery
 	find $REPACK/ota/system/lib/modules -name "*.ko" -print0 | xargs -0 arm-eabi-strip --strip-unneeded
 
 # Determine what to name the new signed package
-if [ -z "$CYANOGEN_NIGHTLY" ]; then
-	MODVERSION=`sed -n -e'/ro\.cm\.version/s/^.*=//p' $REPACK/ota/system/build.prop`
-	: ${MODVERSION:=nightly}
-	OUTFILE=$OUT/update-cm-$MODVERSION-signed.zip
-	echo MODVERSION: $MODVERSION
-else
-	OUTFILE=$OUT/update-squished.zip
-fi
+
+#MODVERSION=`sed -n -e'/ro\.modversion/s/^.*=//p' $REPACK/ota/system/build.prop`
+VERSION=`cat "vendor/aokp/configs/common_versions.mk" | grep ro.aokp.version | head -1 | cut -f2 -d '=' | cut -f3 -d '_'`
+MODVERSION="$TARGET_PRODUCT"_"$VERSION"
+REALDATE=`date +%F-%H_%M`
+OUTFILE=$OUT/$MODVERSION-$REALDATE.zip
 
 # Pack it up and sign
 printf "Zipping package..."
