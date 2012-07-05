@@ -1,1 +1,8 @@
 setprop ro.cwm.forbid_format /bootloader,/dfs,/backup,/splash
+
+# hardware info
+ro.device.cpu=1GHz Texas Instruments OMAP 4430 
+ro.device.gpu=300MHz POWERVR SGX540
+ro.device.rear_cam=N/A
+ro.device.front_cam=N/A
+ro.device.screen_res=1024x600
